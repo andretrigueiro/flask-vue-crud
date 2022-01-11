@@ -1,7 +1,6 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 
-
 BOOKS = [
     {
         'title': 'On the Road',
@@ -41,7 +40,6 @@ def ping_pong():
 @app.route('/books', methods=['GET', 'POST'])
 def all_books():
     response_object = {'status': 'success'}
-    #import pdb;pdb.set_trace()
     if request.method == 'POST':
         post_data = request.get_json()
         BOOKS.append({
