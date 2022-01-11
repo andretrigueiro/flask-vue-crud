@@ -252,9 +252,9 @@ export default {
     onDeleteBook(book) {
       this.removeBook(book.id);
     },
-    created() {
-      this.getBooks();
-    },
+  },
+  created() {
+    this.getBooks();
   },
 };
 </script>
